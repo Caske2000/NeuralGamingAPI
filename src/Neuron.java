@@ -55,6 +55,11 @@ public class Neuron implements Cloneable
         return output;
     }
 
+    public double[] getWeights()
+    {
+        return weights;
+    }
+
     public Neuron clone()throws CloneNotSupportedException{
         return (Neuron) super.clone();
     }

@@ -4,9 +4,9 @@
 public class NeuralNetwork implements Cloneable
 {
     // initialise variables
-    Layer inputLayer;
+    final Layer inputLayer;
     Layer[] hiddenLayers;
-    Layer outputLayer;
+    final Layer outputLayer;
 
     public NeuralNetwork(Layer inputLayer, Layer[] hiddenLayers, Layer outputLayer)
     {
@@ -49,12 +49,12 @@ public class NeuralNetwork implements Cloneable
         }
         // 2) the inputs now go to the hidden layer
         // iterate over every hidden layer
-        for (int j = 0; j < hiddenLayers.length; j++)
+        for (Layer hiddenLayer : hiddenLayers)
         {
             // iterate over every neuron in the j-th hidden layer
             for (int k = 0; k < hiddenLayers[0].getSize(); k++)
             {
-                hiddenLayers[j].get(k).calculate();
+                hiddenLayer.get(k).calculate();
             }
         }
         // 3) the output of the last hidden layer goes to the output layer

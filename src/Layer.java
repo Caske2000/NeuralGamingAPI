@@ -4,7 +4,7 @@
 public class Layer implements Cloneable
 {
     // initialise variables
-    Neuron[] neurons;
+    final Neuron[] neurons;
 
     public Layer(int neuronCount)
     {
