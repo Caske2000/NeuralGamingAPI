@@ -7,7 +7,7 @@ public class Genetics
     {
         try
         {
-            NeuralNetwork child = parent.clone();
+            NeuralNetwork child = parent1.clone();
 
 
 
